@@ -13,22 +13,23 @@ mongoose.connect('mongodb://127.0.0.1:27017/bookStall')
 
 const arr = [
     {
-        name:'Sapiens a brief history of humankind',
-        price:599,
-        category:'History',
-        author:'Yuval noah harari'
-    },
-    {
-        name: 'The Silk road',
-        price: 699,
-        category: 'History',
-        author: 'Peter frankopan',
-    },
-    {
-        name:'Oliver Twist',
-        price:399,
+        name:'The Alchemist',
+        price:699,
         category:'Novel',
-        author:'Charles Dickens'
+        author:'Paulo Coelho'
+    },
+    {
+        name:'To kill a Mockingbird',
+        price:599,
+        category:'Novel',
+        author:'Harrper Lee'
+    },
+    
+    {
+        name:'How to win friends and influence people. How to stop worrying and start living',
+        price:299,
+        category:'Self Growth',
+        author:'Dale Carnegie'
     },
 
 ]

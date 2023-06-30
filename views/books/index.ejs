@@ -9,8 +9,9 @@
     <h1>All books </h1>
     <ul>
         <% for(let book of books){ %>
-            <li> <%= book.name %></li>
+            <li><a href="books/<%= book._id %>"><%= book.name %></a> </li>
         <% } %>
     </ul>
+
 </body>
 </html>

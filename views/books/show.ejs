@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>this is book detail page</title>
+</head>
+<body>
+   <h2><%= product.name %></h2> 
+    <ul>
+        <li><%= product.price %></li>
+        <li><%= product.category %></li>
+        <li><%= product.author %></li>
+    </ul>
+
+    <p><a href="/books">All books</a></p>
+    <p><a href="/books/<%=product._id%>/edit">Edit this Book</a></p>
+
+</body>
+</html>
