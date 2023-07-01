@@ -16,9 +16,9 @@
         <input type="text" name="author" id="author" placeholder="book author" value="<%= book.author  %>">
         <label for="category">Book category</label>
         <select name="category" id="category">
-            <option value="History">History</option>
-            <option value="Self Growth">Self Growth</option>
-            <option value="Novel">Novel</option>
+            <option value="History" <%= book.category ==='History'?'selected':"" %>>History</option>
+            <option value="Self Growth" <%= book.category ==='Self Growth'?'selected':"" %>>Self Growth</option>
+            <option value="Novel" <%= book.category ==='Novel'?'selected':"" %>>Novel</option>
         </select>
         <button >
             Save

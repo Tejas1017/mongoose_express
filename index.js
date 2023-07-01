@@ -16,8 +16,8 @@ mongoose.connect('mongodb://127.0.0.1:27017/bookStall')
     })
 app.set('views',path.join(__dirname,'views'))
 app.set('view engine','ejs')
-app.use(express.urlencoded({extended:true}))
-app.use(methodOverride('_method'))
+app.use(express.urlencoded({extended:true}))//this is needed for post req.body there are lot of way
+app.use(methodOverride('_method'))//in html we can't send pust,delete, patch  request we can only send get and post req so we need this to fake post or get request
 
 
 app.get('/books',async(req,res)=>{
@@ -49,6 +49,11 @@ app.put('/books/:id',async(req,res)=>{
     const updateBook = await Book.findByIdAndUpdate(id,req.body, {runValidators:true})
     res.redirect(`/books/${updateBook._id}`)
     
+})
+app.delete('/books/:id',async(req,res)=>{
+    const {id} = req.params
+    const deleteBook = await Book.findByIdAndDelete(id)
+    res.redirect('/books')
 })
 
 app.listen(3000,()=>{
